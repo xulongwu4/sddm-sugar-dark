@@ -49,6 +49,7 @@ Column {
             model: userModel
             currentIndex: model.lastIndex
             textRole: "name"
+            displayText: ""
             hoverEnabled: true
             onActivated: {
                 username.text = currentText
@@ -166,7 +167,7 @@ Column {
         TextField {
             id: username
             text: config.ForceLastUser == "true" ? selectUser.currentText : null
-            font.capitalization: Font.Capitalize
+            //font.capitalization: Font.Capitalize
             anchors.centerIn: parent
             height: root.font.pointSize * 3
             width: parent.width
